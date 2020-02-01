@@ -33,7 +33,7 @@ NewFileOut:
     ifstream fileI ( FileIn.c_str(), ios::in );
     if ( !fileI )
         {
-        cerr << "Impossible to open " << FileIn << "!" << endl;
+        cerr << "Impossible to read " << FileIn << "!" << endl;
         goto NewFileIn;
 
         }
@@ -55,7 +55,7 @@ NewFileOut:
     ofstream fileO ( FileOut.c_str(), ios::app ); // Open to append.
     if ( !fileO )
         {
-        cerr << "Impossible to open " << FileOut << "!" << endl;
+        cerr << "Impossible to write " << FileOut << "!" << endl;
         goto NewFileOut;
         }
     else
